@@ -32,13 +32,17 @@ A great article on Unity caching can be found in [our blog](https://blog.codemag
 
 {{< tab header="codemagic.yaml" >}}
 {{<markdown>}}
-To use caching, simply add a `cache` section to your `codemagic.yaml` file and list the paths you would like to cache.
+To use caching, simply add a top-level `cache` section to your `codemagic.yaml` file and list the paths you would like to cache.
 
 {{< highlight yaml "style=paraiso-dark">}}
   cache:
     cache_paths:
       - ~/.gradle/caches
       - ...
+  scripts:
+    - ...
+  workflows:
+    - ...
 {{< /highlight >}}
 {{</markdown>}}
 {{< /tab >}}
